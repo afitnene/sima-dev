@@ -74,7 +74,14 @@
                    <div class="row col-md-6">
                         <div class="mb-3 col-12">
                             <label for="os" class="form-label">Operating System</label>
-                            <input type="text" class="form-control" id="os" name="os" value="{{ old('os') }}">
+                            {{-- <input type="text" class="form-control" id="os" name="os" value="{{ old('os') }}"> --}}
+                            <select class="form-control" id="grade" name="os">
+                                <option selected></option>
+                                <option value="RedHat" @if (old('os')=='RedHat' ) selected="selected" @endif>RedHat</option>
+                                <option value="CentOs" @if (old('os')=='CentOs' ) selected="selected" @endif>CentOs</option>
+                                <option value="Ubuntu" @if (old('os')=='Ubuntu' ) selected="selected" @endif>Ubuntu</option>
+                                <option value="Debian" @if (old('os')=='Debian' ) selected="selected" @endif>Debian</option>
+                            </select>
                         </div>
                    </div>
                 </div>
@@ -184,7 +191,13 @@
                     <div class="row col-md-6">
                         <div class="mb-3 col-12">
                             <label for="keterangan" class="form-label">Keterangan <b class="required">*</b></label>
-                            <input type="text" class="form-control @error('keterangan') is-invalid @enderror" id="keterangan" name="keterangan" value="{{ old('keterangan') }}" required>
+                            {{-- <input type="text" class="form-control @error('keterangan') is-invalid @enderror" id="keterangan" name="keterangan" value="{{ old('keterangan') }}" required> --}}
+                            <select class="form-control" id="grade" name="keterangan" required>
+                                <option selected></option>
+                                <option value="Aktif" @if (old('keterangan')=='Aktif' ) selected="selected" @endif>Aktif</option>
+                                <option value="Tidak Aktif" @if (old('keterangan')=='Tidak Aktif' ) selected="selected" @endif>Tidak Aktif</option>
+                                
+                            </select>
                             @error('keterangan')
                             <div class="invalid-feedback">
                                 {{ $message }}
