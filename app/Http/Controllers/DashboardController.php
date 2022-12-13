@@ -16,7 +16,9 @@ class DashboardController extends Controller
             'pic' => PicModel::all()->count(),
             'app' => AppModel::all()->count(),
             'appOld' => AppModel::where('tahunPengadaan', '<=', date('Y') - 5)->count(),
-            'appOff' => AppModel::where('keterangan', 'Tidak aktif')->count()
+            'appOn' => AppModel::where('keterangan', 'Bisa Diakses')->count(),
+            'gradeA' => AppModel::where('grade', 'A')->count(),
+            'gradeB' => AppModel::where('grade', 'B')->count()
         ]);
     }
 }

@@ -82,8 +82,8 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                Jumlah Aplikasi Tidak Aktif</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $appOff }}</div>
+                                Jumlah Aplikasi Bisa Diakses</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $appOn }}</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-times-circle fa-2x text-gray-300"></i>
@@ -154,11 +154,11 @@
                             <i class="fas fa-circle text-primary"></i> Grade A
                         </span>
                         <span class="mr-2">
-                            <i class="fas fa-circle text-success"></i> Grade B
+                            <i class="fas fa-circle text-danger"></i> Grade B
                         </span>
-                        <span class="mr-2">
+                        {{-- <span class="mr-2">
                             <i class="fas fa-circle text-info"></i> Non Grade
-                        </span>
+                        </span> --}}
                     </div>
                 </div>
             </div>

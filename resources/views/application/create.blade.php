@@ -194,8 +194,8 @@
                             {{-- <input type="text" class="form-control @error('keterangan') is-invalid @enderror" id="keterangan" name="keterangan" value="{{ old('keterangan') }}" required> --}}
                             <select class="form-control" id="grade" name="keterangan" required>
                                 <option selected></option>
-                                <option value="Aktif" @if (old('keterangan')=='Aktif' ) selected="selected" @endif>Aktif</option>
-                                <option value="Tidak Aktif" @if (old('keterangan')=='Tidak Aktif' ) selected="selected" @endif>Tidak Aktif</option>
+                                <option value="Bisa Diakses" @if (old('keterangan')=='Bisa Diakses' ) selected="selected" @endif>Bisa Diakses</option>
+                                <option value="Tidak Bisa Diakses" @if (old('keterangan')=='Tidak Bisa Diakses' ) selected="selected" @endif>Tidak Bisa Diakses</option>
                                 
                             </select>
                             @error('keterangan')

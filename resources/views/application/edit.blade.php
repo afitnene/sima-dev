@@ -185,7 +185,12 @@
                     <div class="row col-md-6">
                         <div class="mb-3 col-12">
                             <label for="keterangan" class="form-label">Keterangan <b class="required">*</b></label>
-                            <input type="text" class="form-control @error('keterangan') is-invalid @enderror" id="keterangan" name="keterangan" value="{{ old('keterangan', $apps[0]->keterangan) }}" required>
+                            {{-- <input type="text" class="form-control @error('keterangan') is-invalid @enderror" id="keterangan" name="keterangan" value="{{ old('keterangan', $apps[0]->keterangan) }}" required> --}}
+                            <select class="form-control" id="grade" name="keterangan" required>
+                                <option selected></option>
+                                <option value="Bisa Diakses" @if (old('keterangan', $apps[0]->keterangan)=='Bisa Diakses' ) selected="selected" @endif>Bisa Diakses</option>
+                                <option value="Tidak Bisa Diakses" @if (old('keterangan', $apps[0]->keterangan)=='Tidak Bisa Diakses' ) selected="selected" @endif>Tidak Bisa Diakses</option>
+                            </select>
                             @error('keterangan')
                             <div class="invalid-feedback">
                                 {{ $message }}
